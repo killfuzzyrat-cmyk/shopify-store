@@ -181,213 +181,32 @@ footer{background:var(--navy);padding:60px 40px 32px}
   .sg{grid-template-columns:1fr}
   .rel-grid{grid-template-columns:1fr 1fr}
 }
-/* ═══ HERO v8 — Best Possible ═══ */
-.hero{display:grid;grid-template-columns:42fr 58fr;min-height:660px;overflow:hidden;position:relative}
-.hero-left{
-  background:
-    radial-gradient(ellipse 65% 55% at 12% 72%, rgba(245,166,35,.08) 0%, transparent 58%),
-    radial-gradient(ellipse 50% 45% at 88% 8%,  rgba(37,99,235,.06) 0%, transparent 52%),
-    linear-gradient(160deg,#050B15 0%,#091525 32%,#0D2040 68%,#091828 100%);
-  padding:56px 48px 56px 56px;
-  display:flex;flex-direction:column;justify-content:center;
-  position:relative;overflow:hidden;
-}
-/* Subtle dot-grid texture */
-.hero-left::before{
-  content:'';position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(255,255,255,.025) 1px,transparent 1px);
-  background-size:28px 28px;pointer-events:none;z-index:0;
-}
-/* Bottom-left warm glow */
-.h-glow{
-  position:absolute;bottom:-100px;left:-80px;
-  width:360px;height:360px;
-  background:radial-gradient(circle,rgba(245,166,35,.09) 0%,rgba(37,99,235,.06) 45%,transparent 70%);
-  pointer-events:none;z-index:0;
-}
-
-/* ── Eyebrow badge ── */
-.h-eyebrow{
-  display:inline-flex;align-items:center;gap:9px;
-  background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.28);
-  padding:6px 14px 6px 10px;border-radius:100px;
-  margin-bottom:20px;position:relative;z-index:1;width:fit-content;
-}
-.h-eyedot{width:7px;height:7px;border-radius:50%;background:#F5A623;box-shadow:0 0 6px rgba(245,166,35,.6);flex-shrink:0}
-.h-eyetext{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#F5A623}
-
-/* ── Headline ── */
-.h-headline{font-size:clamp(25px,2.8vw,42px);font-weight:800;line-height:1.1;color:#fff;margin-bottom:2px;position:relative;z-index:1;letter-spacing:-.3px}
-.h-em{font-size:clamp(25px,2.8vw,42px);font-weight:800;font-style:italic;line-height:1.18;margin-bottom:16px;position:relative;z-index:1;
-  background:linear-gradient(110deg,#F5A623 0%,#FFD080 50%,#E8970F 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-
-/* ── Body ── */
-.h-sub{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.74;margin-bottom:20px;max-width:395px;position:relative;z-index:1;font-weight:400}
-
-/* ── Social proof ── */
-.h-social{display:flex;align-items:center;gap:14px;margin-bottom:16px;position:relative;z-index:1}
-.h-avs{display:flex;align-items:center}
-.h-av{width:34px;height:34px;border-radius:50%;border:2.5px solid rgba(255,255,255,.88);overflow:hidden;margin-right:-10px;flex-shrink:0;background:#1E3A6E}
-.h-av:last-child{margin-right:0}
-.h-av img{width:100%;height:100%;object-fit:cover;display:block}
-.h-socr{margin-left:10px;display:flex;flex-direction:column;gap:2px}
-.h-socrow{display:flex;align-items:center;gap:6px}
-.h-sstar{display:inline-flex;gap:1px}
-.h-sstar svg{width:13px;height:13px}
-.h-snum{font-size:13px;font-weight:700;color:#fff}
-.h-stxt{font-size:11px;color:rgba(255,255,255,.38)}
-
-/* ── Urgency pill ── */
-.h-urgency{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(232,97,26,.1);border:1px solid rgba(232,97,26,.22);
-  padding:7px 14px;border-radius:100px;width:fit-content;
-  margin-bottom:20px;position:relative;z-index:1;
-  animation:upulse 2.5s ease-in-out infinite;
-}
-.h-urg-ico{width:16px;height:16px;flex-shrink:0}
-.h-urg-txt{font-size:12px;font-weight:600;color:#FCA975}
-@keyframes upulse{0%,100%{border-color:rgba(232,97,26,.22)}50%{border-color:rgba(232,97,26,.45)}}
-
-/* ── CTAs ── */
-.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;position:relative;z-index:1}
-.h-cta1{
-  background:linear-gradient(135deg,#F07A2A 0%,#E8611A 100%);
-  color:#fff;padding:14px 24px;font-size:13.5px;font-weight:700;
-  border-radius:11px;display:inline-flex;align-items:center;gap:10px;
-  text-decoration:none;transition:all .28s;
-  box-shadow:0 4px 22px rgba(232,97,26,.45),0 1px 3px rgba(0,0,0,.15);
-  position:relative;overflow:hidden;
-}
-.h-cta1::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,.12),transparent);opacity:0;transition:opacity .28s}
-.h-cta1:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(232,97,26,.55),0 2px 6px rgba(0,0,0,.2)}
-.h-cta1:hover::after{opacity:1}
-.h-cta1 svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;flex-shrink:0}
-.h-cta1 .h-arr{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .28s}
-.h-cta1:hover .h-arr{transform:translateX(4px)}
-.h-cta2{
-  background:rgba(255,255,255,.07);color:rgba(255,255,255,.85);
-  border:1.5px solid rgba(255,255,255,.18);padding:14px 24px;
-  font-size:13.5px;font-weight:600;border-radius:11px;
-  display:inline-flex;align-items:center;gap:8px;
-  text-decoration:none;transition:all .28s;
-}
-.h-cta2:hover{border-color:rgba(255,255,255,.38);background:rgba(255,255,255,.11);color:#fff}
-
-/* ── Micro-copy under CTAs ── */
-.h-micro{
-  display:flex;align-items:center;gap:14px;margin-bottom:28px;
-  position:relative;z-index:1;flex-wrap:wrap;
-}
-.h-mitem{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;color:rgba(255,255,255,.38);font-weight:500}
-.h-mitem svg{width:13px;height:13px;stroke:rgba(245,166,35,.7);fill:none;stroke-width:2.5;flex-shrink:0}
-.h-mdot{color:rgba(255,255,255,.18);font-size:14px}
-
-/* ── Glass Trust Bar ── */
-.h-trust{
-  display:flex;align-items:stretch;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:15px;
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  overflow:hidden;position:relative;z-index:1;
-}
-.h-ti{display:flex;align-items:center;gap:10px;padding:13px 16px;flex:1;border-right:1px solid rgba(255,255,255,.07)}
-.h-ti:last-child{border-right:none}
-.h-tiico{width:32px;height:32px;border-radius:9px;background:rgba(245,166,35,.13);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.h-tiico svg{width:14px;height:14px;stroke:#F5A623;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.h-titop{font-size:12px;font-weight:700;color:rgba(255,255,255,.88);line-height:1.2}
-.h-tibot{font-size:10px;color:rgba(255,255,255,.35);line-height:1.2;margin-top:1px}
-
-/* ── Right panel ── */
-.hero-right{position:relative;overflow:hidden;background:#060F1E}
-.hero-img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:brightness(.94) saturate(1.08) contrast(1.02);
-  transition:transform 10s ease;position:relative;z-index:1;
-}
-.hero:hover .hero-img{transform:scale(1.03)}
-.h-vig{
-  position:absolute;inset:0;pointer-events:none;z-index:2;
-  background:
-    linear-gradient(to right,rgba(5,11,21,.48) 0%,rgba(5,11,21,.08) 22%,transparent 40%),
-    linear-gradient(to top,rgba(5,11,21,.6) 0%,transparent 30%),
-    linear-gradient(to bottom,rgba(5,11,21,.22) 0%,transparent 20%);
-}
-
-/* ── Floating card base ── */
-.fc8{position:absolute;z-index:10;background:#fff;border-radius:16px;box-shadow:0 10px 44px rgba(0,0,0,.22),0 2px 10px rgba(0,0,0,.1)}
-
-/* Rating pill */
-.fc8-rat{
-  top:22px;left:22px;
-  padding:11px 18px;display:flex;align-items:center;gap:12px;
-  border-radius:100px;min-width:218px;
-  animation:fc8f 5.5s ease-in-out .3s infinite;
-}
-.fc8-rat-ico{width:38px;height:38px;border-radius:50%;background:#FEF9C3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.fc8-rat-stars{display:flex;gap:1px;margin-bottom:2px}
-.fc8-rat-stars svg{width:12px;height:12px}
-.fc8-rat-num{font-size:13px;font-weight:700;color:#0F172A;line-height:1}
-.fc8-rat-sub{font-size:10.5px;color:#64748B;margin-top:1px}
-
-/* Product cards */
-.fc8-p{padding:14px 14px 16px;width:160px}
-.fc8-badge{font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 9px;border-radius:100px;display:inline-block;margin-bottom:10px}
-.fc8-badge.pop{background:#DCFCE7;color:#166534}
-.fc8-badge.best{background:#FEE2E2;color:#991B1B}
-.fc8-badge.fav{background:#DBEAFE;color:#1E40AF}
-.fc8-thumb{width:100%;height:82px;border-radius:10px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;font-size:42px;line-height:1;overflow:hidden}
-.fc8-thumb-c1{background:linear-gradient(135deg,#EFF6FF,#DBEAFE)}
-.fc8-thumb-c2{background:linear-gradient(135deg,#FEFCE8,#FEF9C3)}
-.fc8-thumb-c3{background:linear-gradient(135deg,#F8FAFC,#E2E8F0)}
-.fc8-pname{font-size:12px;font-weight:700;color:#0F172A;line-height:1.35;margin-bottom:5px}
-.fc8-prow{display:flex;align-items:center;justify-content:space-between}
-.fc8-pstars{font-size:10px;color:#F59E0B;letter-spacing:.3px}
-.fc8-prating{font-size:10px;color:#64748B;font-weight:600}
-.fc8-pprice{font-size:16px;font-weight:800;color:#E8611A;margin-top:4px}
-.fc8-psave{font-size:9.5px;color:#059669;font-weight:600;background:#DCFCE7;padding:2px 7px;border-radius:10px;margin-left:6px}
-
-/* Card positions */
-.fc8-c1{bottom:112px;left:18px;animation:fc8f 5.5s ease-in-out 0s infinite;transition:box-shadow .3s}
-.fc8-c2{top:62px;right:20px;animation:fc8f 5.5s ease-in-out 1.4s infinite}
-.fc8-c3{bottom:72px;right:20px;animation:fc8f 5.5s ease-in-out .7s infinite}
-.fc8-c1:hover,.fc8-c2:hover,.fc8-c3:hover{box-shadow:0 18px 56px rgba(0,0,0,.28),0 4px 12px rgba(0,0,0,.12)}
-
-/* Shipping strip */
-.fc8-ship{
-  position:absolute;bottom:0;left:0;right:0;z-index:10;
-  background:rgba(5,11,21,.91);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  padding:13px 24px;display:flex;align-items:center;gap:16px;
-  border-top:1px solid rgba(255,255,255,.08);
-}
-.fc8-ship-ico{width:26px;height:26px;flex-shrink:0;stroke:rgba(245,166,35,.85);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.fc8-ship-title{font-size:13px;font-weight:700;color:#fff}
-.fc8-ship-sub{font-size:11px;color:rgba(255,255,255,.42);margin-top:2px}
-
-@keyframes fc8f{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-
-/* ── Mobile ── */
-@media(max-width:960px){
+/* ═══ HERO simple ═══ */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px;overflow:hidden;background:linear-gradient(140deg,#0A1628 0%,#112248 50%,#1A3A72 100%)}
+.hero-left{padding:80px 52px 80px 60px;display:flex;flex-direction:column;justify-content:center}
+.h-eye{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.h-eye-line{width:28px;height:2px;background:#F5A623;flex-shrink:0;border-radius:2px}
+.h-eye-txt{font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#F5A623}
+.h-h1{font-size:clamp(28px,3.2vw,48px);font-weight:800;line-height:1.12;color:#fff;letter-spacing:-.3px;margin-bottom:18px}
+.h-h1 em{font-style:normal;color:#F5A623}
+.h-p{font-size:15px;color:rgba(255,255,255,.58);line-height:1.75;max-width:420px;margin-bottom:36px}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+.h-btn1{background:#E8611A;color:#fff;padding:14px 28px;font-size:14px;font-weight:700;border-radius:9px;display:inline-block;text-decoration:none;transition:all .25s;box-shadow:0 4px 18px rgba(232,97,26,.4)}
+.h-btn1:hover{background:#D4561A;transform:translateY(-2px);box-shadow:0 8px 26px rgba(232,97,26,.5)}
+.h-btn2{background:transparent;color:rgba(255,255,255,.8);border:2px solid rgba(255,255,255,.25);padding:14px 28px;font-size:14px;font-weight:600;border-radius:9px;display:inline-block;text-decoration:none;transition:all .25s}
+.h-btn2:hover{border-color:rgba(255,255,255,.55);color:#fff}
+.h-badges{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.h-badge{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.55);font-weight:500}
+.h-badge-dot{width:6px;height:6px;border-radius:50%;background:#F5A623;flex-shrink:0}
+.h-badge-sep{width:1px;height:18px;background:rgba(255,255,255,.14);flex-shrink:0}
+.hero-right{position:relative;overflow:hidden}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.88) saturate(1.05)}
+.h-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,22,40,.55) 0%,rgba(10,22,40,.1) 35%,transparent 60%),linear-gradient(to top,rgba(10,22,40,.5) 0%,transparent 40%)}
+@media(max-width:860px){
   .hero{grid-template-columns:1fr}
-  .hero-left{padding:48px 24px 44px}
-  .hero-right{min-height:360px}
-  .fc8-c1{bottom:72px;left:12px;width:146px}
-  .fc8-c2{top:40px;right:12px;width:146px}
-  .fc8-c3{display:none}
-  .fc8-rat{left:10px;top:10px;min-width:188px}
-}
-@media(max-width:520px){
-  .hero-right{min-height:280px}
-  .h-headline,.h-em{font-size:23px}
-  .h-btns{flex-direction:column}
-  .h-micro{gap:8px}
-  .h-trust{flex-wrap:wrap;border-radius:12px}
-  .h-ti{flex:none;width:calc(50% - .5px);border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
-  .h-ti:nth-child(odd){border-right:1px solid rgba(255,255,255,.07)}
-  .h-ti:nth-child(3),.h-ti:nth-child(4){border-bottom:none}
+  .hero-left{padding:56px 24px 48px}
+  .hero-right{min-height:300px}
+  .h-btns{flex-direction:column;gap:10px}
 }`;
 
 const JS=`let C=[];
@@ -471,132 +290,30 @@ function P0(){return `<!DOCTYPE html>
 </div></nav>
 <section class="hero">
   <div class="hero-left">
-    <div class="h-glow"></div>
-
-    <div class="h-eyebrow">
-      <span class="h-eyedot"></span>
-      <span class="h-eyetext">Trusted U.S. Home Essentials</span>
+    <div class="h-eye">
+      <span class="h-eye-line"></span>
+      <span class="h-eye-txt">Trusted U.S. Home Essentials</span>
     </div>
-
-    <h1 class="h-headline">Make Every Corner<br>Of Your Home Feel</h1>
-    <p class="h-em">Smarter, Cleaner &amp; Easier</p>
-
-    <p class="h-sub">Curated kitchen, organization, smart home &amp; pet essentials &mdash; hand-picked for busy U.S. homes. Quality products, fast shipping, zero hassle.</p>
-
-    <div class="h-social">
-      <div class="h-avs">
-        <div class="h-av"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=44&h=44&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
-        <div class="h-av"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=44&h=44&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
-        <div class="h-av"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=44&h=44&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
-        <div class="h-av"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=44&h=44&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
-      </div>
-      <div class="h-socr">
-        <div class="h-socrow">
-          <div class="h-sstar"><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <span class="h-snum">4.8</span>
-        </div>
-        <div class="h-stxt">12,400+ verified customer reviews</div>
-      </div>
-    </div>
-
-    <div class="h-urgency">
-      <span class="h-urg-ico"><svg viewBox="0 0 24 24" fill="#E8611A" stroke="none"><path d="M12 1.5s2.5 3 2.5 6c0 1.5-.5 2.5-1.5 3.5 0-2-1.5-3.5-1.5-3.5s-1 2-1 4c-1.5-1.5-2-3.5-2-5.5S10 2.5 10 2.5c-3 2-4 5-4 8a6 6 0 0012 0c0-5-6-9-6-9z"/></svg></span>
-      <span class="h-urg-txt">247 customers bought this week</span>
-    </div>
-
+    <h1 class="h-h1">Make Your Home Feel<br><em>Smarter &amp; Easier</em></h1>
+    <p class="h-p">Practical kitchen, organization, smart home, and pet essentials&nbsp;&mdash; curated to save you time, reduce clutter, and simplify everyday life.</p>
     <div class="h-btns">
-      <a href="#best-sellers" class="h-cta1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-        Shop Best Sellers
-        <svg class="h-arr" viewBox="0 0 20 20"><polyline points="4 10 16 10"/><polyline points="11 5 16 10 11 15"/></svg>
-      </a>
-      <a href="#kitchen" class="h-cta2">Browse Collections</a>
+      <a href="#best-sellers" class="h-btn1">Shop Customer Favorites</a>
+      <a href="#kitchen" class="h-btn2">Explore Collections</a>
     </div>
-
-    <div class="h-micro">
-      <span class="h-mitem"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 8 6 12 14 4"/></svg> Free US Shipping over $50</span>
-      <span class="h-mdot">&middot;</span>
-      <span class="h-mitem"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 8 6 12 14 4"/></svg> 30-Day Free Returns</span>
-      <span class="h-mdot">&middot;</span>
-      <span class="h-mitem"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 8 6 12 14 4"/></svg> Secure Checkout</span>
-    </div>
-
-    <div class="h-trust">
-      <div class="h-ti">
-        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div><div class="h-titop">Curated</div><div class="h-tibot">Home Finds</div></div>
-      </div>
-      <div class="h-ti">
-        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <div><div class="h-titop">Fast</div><div class="h-tibot">US Shipping</div></div>
-      </div>
-      <div class="h-ti">
-        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-        <div><div class="h-titop">Secure</div><div class="h-tibot">Checkout</div></div>
-      </div>
-      <div class="h-ti">
-        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 00-4-4H4"/></svg></div>
-        <div><div class="h-titop">30-Day</div><div class="h-tibot">Returns</div></div>
-      </div>
+    <div class="h-badges">
+      <div class="h-badge"><span class="h-badge-dot"></span>Free US Shipping $50+</div>
+      <div class="h-badge-sep"></div>
+      <div class="h-badge"><span class="h-badge-dot"></span>30-Day Returns</div>
+      <div class="h-badge-sep"></div>
+      <div class="h-badge"><span class="h-badge-dot"></span>Secure Checkout</div>
     </div>
   </div>
-
   <div class="hero-right">
     <img class="hero-img"
       src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=90&auto=format&fit=crop&crop=center"
-      alt="Modern organized kitchen with practical home essentials"
+      alt="Modern organized kitchen"
       loading="eager"/>
-    <div class="h-vig"></div>
-
-    <div class="fc8 fc8-rat">
-      <div class="fc8-rat-ico">&#11088;</div>
-      <div>
-        <div class="fc8-rat-stars"><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#F5A623" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <div class="fc8-rat-num">4.8/5 Customer Rating</div>
-        <div class="fc8-rat-sub">20,000+ Happy Customers</div>
-      </div>
-    </div>
-
-    <div class="fc8 fc8-p fc8-c1">
-      <div class="fc8-badge pop">Most Popular</div>
-      <div class="fc8-thumb fc8-thumb-c1">&#129803;</div>
-      <div class="fc8-pname">Airtight Container Set</div>
-      <div class="fc8-prow">
-        <span class="fc8-pstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span class="fc8-prating">4.9</span>
-      </div>
-      <div class="fc8-pprice">$24.99 <span class="fc8-psave">Save 44%</span></div>
-    </div>
-
-    <div class="fc8 fc8-p fc8-c2">
-      <div class="fc8-badge best">Bestseller</div>
-      <div class="fc8-thumb fc8-thumb-c2">&#128161;</div>
-      <div class="fc8-pname">Motion Sensor Light</div>
-      <div class="fc8-prow">
-        <span class="fc8-pstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span class="fc8-prating">4.9</span>
-      </div>
-      <div class="fc8-pprice">$18.99 <span class="fc8-psave">Save 40%</span></div>
-    </div>
-
-    <div class="fc8 fc8-p fc8-c3">
-      <div class="fc8-badge fav">Customer Favorite</div>
-      <div class="fc8-thumb fc8-thumb-c3">&#129695;</div>
-      <div class="fc8-pname">Kitchen Sink Organizer</div>
-      <div class="fc8-prow">
-        <span class="fc8-pstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span class="fc8-prating">4.8</span>
-      </div>
-      <div class="fc8-pprice">$16.99 <span class="fc8-psave">Save 36%</span></div>
-    </div>
-
-    <div class="fc8-ship">
-      <svg class="fc8-ship-ico" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-      <div>
-        <div class="fc8-ship-title">Fast &amp; Reliable US Shipping</div>
-        <div class="fc8-ship-sub">Get your favorites delivered quickly to your door. &#127482;&#127480;</div>
-      </div>
-    </div>
+    <div class="h-overlay"></div>
   </div>
 </section>
 
