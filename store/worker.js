@@ -181,108 +181,104 @@ footer{background:var(--navy);padding:60px 40px 32px}
   .sg{grid-template-columns:1fr}
   .rel-grid{grid-template-columns:1fr 1fr}
 }
-/* ═══ HERO v5 — Premium DTC ═══ */
-.hero{display:grid;grid-template-columns:55fr 45fr;min-height:640px;position:relative;overflow:visible}
+/* ═══ HERO v6 — DTC Reference Match ═══ */
+.hero{display:grid;grid-template-columns:42fr 58fr;min-height:640px;overflow:hidden}
 .hero-left{
-  background:
-    radial-gradient(ellipse 55% 50% at 8% 65%, rgba(37,99,235,.2) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 35% at 92% 8%, rgba(14,48,120,.15) 0%, transparent 50%),
-    linear-gradient(148deg,#050D1A 0%,#09162C 28%,#0D1F3C 60%,#081528 100%);
-  padding:88px 68px 84px 60px;
+  background:linear-gradient(158deg,#060F1E 0%,#0A1628 48%,#0C1C35 100%);
+  padding:60px 48px 60px 56px;
   display:flex;flex-direction:column;justify-content:center;
   position:relative;overflow:hidden;
 }
-.h-shimmer{position:absolute;right:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent 0%,rgba(91,158,240,.35) 30%,rgba(126,200,255,.55) 60%,transparent 100%);pointer-events:none}
-.hero-right{position:relative;overflow:hidden;background:#060F1C;min-height:640px}
-.h-img-glow{position:absolute;inset:-15%;background:radial-gradient(ellipse 75% 70% at 55% 52%,rgba(200,144,42,.2) 0%,rgba(30,70,160,.1) 45%,transparent 70%);z-index:0;pointer-events:none}
-.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.86) saturate(1.1) contrast(1.03);transition:transform 9s ease;position:relative;z-index:1}
-.hero:hover .hero-img{transform:scale(1.04)}
-.h-vignette{position:absolute;inset:0;z-index:2;pointer-events:none;background:
-  linear-gradient(to right,rgba(5,13,26,.5) 0%,rgba(5,13,26,.12) 28%,transparent 52%),
-  linear-gradient(to top,rgba(4,10,20,.7) 0%,rgba(4,10,20,.12) 38%,transparent 58%),
-  linear-gradient(to bottom,rgba(4,10,20,.35) 0%,transparent 28%)}
-
+.h-glow{position:absolute;bottom:-100px;left:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(245,166,35,.08) 0%,rgba(37,99,235,.07) 40%,transparent 70%);pointer-events:none}
 /* — Eyebrow — */
-.h-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;position:relative;z-index:1}
-.h-eyedot{width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,#7EC8FF,#5B9EF0);flex-shrink:0;box-shadow:0 0 8px rgba(91,158,240,.5)}
-.h-eyetext{font-size:10.5px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(126,200,255,.85);position:relative}
-
+.h-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:18px;position:relative;z-index:1}
+.h-dash{width:28px;height:2.5px;background:#F5A623;border-radius:2px;flex-shrink:0}
+.h-eyetext{font-size:10.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#F5A623}
 /* — Headline — */
-.h-headline{font-size:clamp(27px,3vw,46px);font-weight:800;line-height:1.11;color:#EEF2FF;letter-spacing:-.5px;margin-bottom:20px;position:relative;z-index:1}
-.h-headline em{font-style:normal;background:linear-gradient(125deg,#93C5FD 0%,#60A5FA 45%,#93C5FD 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.h-rule{width:44px;height:2px;background:linear-gradient(to right,rgba(91,158,240,.6),transparent);margin-bottom:20px;position:relative;z-index:1}
-
-/* — Quote + Sub — */
-.h-quote{font-size:13.5px;color:rgba(238,242,255,.38);font-style:italic;line-height:1.65;margin-bottom:20px;padding:11px 16px;border-left:2px solid rgba(91,158,240,.4);background:rgba(91,158,240,.06);border-radius:0 10px 10px 0;position:relative;z-index:1}
-.h-sub{font-size:14.5px;color:rgba(238,242,255,.56);line-height:1.78;margin-bottom:36px;max-width:435px;position:relative;z-index:1;font-weight:400}
-
+.h-headline{font-size:clamp(26px,2.9vw,42px);font-weight:800;line-height:1.12;color:#FFFFFF;margin-bottom:4px;position:relative;z-index:1}
+.h-headline-em{font-size:clamp(26px,2.9vw,42px);font-weight:800;font-style:italic;color:#F5A623;line-height:1.2;margin-bottom:18px;position:relative;z-index:1}
+/* — Sub — */
+.h-sub{font-size:14px;color:rgba(255,255,255,.5);line-height:1.74;margin-bottom:18px;max-width:400px;position:relative;z-index:1}
+/* — Social proof row — */
+.h-social{display:flex;align-items:center;gap:14px;margin-bottom:24px;position:relative;z-index:1}
+.h-avatars{display:flex}
+.h-av{width:30px;height:30px;border-radius:50%;border:2.5px solid rgba(255,255,255,.8);background:linear-gradient(135deg,#1E3A6E,#0A1628);display:flex;align-items:center;justify-content:center;font-size:13px;margin-right:-9px;flex-shrink:0}
+.h-av:last-child{margin-right:0}
+.h-socr{display:flex;flex-direction:column;gap:1px;margin-left:8px}
+.h-socstars{font-size:13px;color:#F5A623;letter-spacing:.5px;display:inline-flex;align-items:center;gap:7px}
+.h-socnum{font-size:12.5px;font-weight:700;color:#fff}
+.h-soctxt{font-size:11px;color:rgba(255,255,255,.42)}
 /* — CTAs — */
-.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;position:relative;z-index:1}
-.h-cta1{background:#EEF2FF;color:#07111E;padding:15px 28px;font-size:13px;font-weight:800;border:none;border-radius:10px;cursor:pointer;transition:all .3s;display:inline-block;text-decoration:none;letter-spacing:.1px;box-shadow:0 2px 16px rgba(238,242,255,.15)}
-.h-cta1:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(238,242,255,.22)}
-.h-cta2{background:transparent;color:rgba(238,242,255,.68);border:1.5px solid rgba(238,242,255,.16);padding:15px 28px;font-size:13px;font-weight:600;border-radius:10px;cursor:pointer;transition:all .3s;display:inline-block;text-decoration:none}
-.h-cta2:hover{border-color:rgba(91,158,240,.55);color:rgba(147,197,253,.9);background:rgba(91,158,240,.09)}
-
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;position:relative;z-index:1}
+.h-cta1{background:#E8611A;color:#fff;padding:14px 22px;font-size:13px;font-weight:700;border-radius:10px;display:inline-flex;align-items:center;gap:9px;text-decoration:none;transition:all .25s;box-shadow:0 4px 22px rgba(232,97,26,.42)}
+.h-cta1:hover{background:#D4561A;transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,97,26,.52)}
+.h-cta2{background:rgba(255,255,255,.07);color:#fff;border:1.5px solid rgba(255,255,255,.22);padding:14px 22px;font-size:13px;font-weight:600;border-radius:10px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;transition:all .25s}
+.h-cta2:hover{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.12)}
 /* — Glass Trust Bar — */
-.h-trust{display:flex;align-items:stretch;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:16px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);overflow:hidden;position:relative;z-index:1}
-.h-ti{display:flex;align-items:center;gap:11px;padding:16px 18px;flex:1;border-right:1px solid rgba(255,255,255,.07);transition:background .2s;cursor:default}
+.h-trust{display:flex;align-items:stretch;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:14px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);margin-bottom:28px;position:relative;z-index:1;overflow:hidden}
+.h-ti{display:flex;align-items:center;gap:10px;padding:13px 15px;flex:1;border-right:1px solid rgba(255,255,255,.07)}
 .h-ti:last-child{border-right:none}
-.h-ti:hover{background:rgba(255,255,255,.04)}
-.h-ti-ico{font-size:20px;flex-shrink:0;line-height:1}
-.h-ti-inner{display:flex;flex-direction:column;gap:1px}
-.h-ti-label{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(238,242,255,.3)}
-.h-ti-txt{font-size:12px;font-weight:700;color:rgba(238,242,255,.75);white-space:nowrap}
-
-/* — Floating Cards — */
-.fc5{position:absolute;z-index:10;background:rgba(255,255,255,.97);border-radius:18px;box-shadow:0 16px 56px rgba(0,0,0,.26),0 3px 12px rgba(0,0,0,.12)}
-/* Product card — bottom-left overlap */
-.fc5-prod{bottom:36px;left:-44px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;min-width:248px;animation:fc5f 5.5s ease-in-out infinite}
-/* Rating card — top-right */
-.fc5-rate{top:38px;right:-36px;padding:18px 22px;min-width:178px;animation:fc5f 5.5s ease-in-out 1.8s infinite}
-/* Delivery badge — mid-right */
-.fc5-del{bottom:148px;right:-34px;padding:13px 18px;display:flex;align-items:center;gap:11px;min-width:195px;animation:fc5f 5.5s ease-in-out .9s infinite}
-@keyframes fc5f{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-
-/* Product card internals */
-.fc5-badge{display:inline-block;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;background:#E8611A;color:#fff;padding:3px 9px;border-radius:6px;margin-bottom:8px}
-.fc5-imgbox{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:27px;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);flex-shrink:0;margin-top:3px}
-.fc5-name{font-size:13px;font-weight:700;color:#0F172A;line-height:1.3;margin-bottom:6px}
-.fc5-prow{display:flex;align-items:center;gap:7px}
-.fc5-price{font-size:16px;font-weight:800;color:#1B6CDE}
-.fc5-was{font-size:11px;color:#94A3B8;text-decoration:line-through;font-weight:500}
-.fc5-pstars{font-size:11px;color:#F59E0B;letter-spacing:.5px;margin-top:4px}
-
-/* Rating card internals */
-.fc5-rstars{font-size:16px;color:#F59E0B;letter-spacing:1px;margin-bottom:6px}
-.fc5-rnum{font-size:24px;font-weight:800;color:#0F172A;line-height:1}
-.fc5-rlabel{font-size:12px;font-weight:600;color:#334155;margin:3px 0 1px}
-.fc5-rsub{font-size:11px;color:#94A3B8}
-.fc5-rbar{height:5px;background:#F1F5F9;border-radius:3px;margin-top:12px;overflow:hidden}
-.fc5-rbar-fill{height:100%;width:96%;background:linear-gradient(to right,#F59E0B,#FCD34D);border-radius:3px}
-
-/* Delivery card internals */
-.fc5-del-ico{font-size:22px;flex-shrink:0}
-.fc5-del-title{font-size:13px;font-weight:700;color:#0F172A}
-.fc5-del-sub{font-size:11px;color:#64748B;margin-top:2px}
-
-/* Mobile */
+.h-tiico{width:32px;height:32px;border-radius:9px;background:rgba(245,166,35,.14);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.h-titop{font-size:12px;font-weight:700;color:#fff;line-height:1.2}
+.h-tibot{font-size:10.5px;color:rgba(255,255,255,.37);line-height:1.2}
+/* — Quote — */
+.h-qsec{display:flex;align-items:flex-start;gap:12px;position:relative;z-index:1}
+.h-qmark{font-size:64px;color:#F5A623;line-height:.62;font-family:Georgia,serif;flex-shrink:0;margin-top:6px}
+.h-qtxt{font-size:14.5px;font-style:italic;color:rgba(255,255,255,.76);line-height:1.62}
+.h-qline{width:52px;height:3px;background:#F5A623;border-radius:2px;margin-top:9px}
+/* — Right panel — */
+.hero-right{position:relative;overflow:hidden;background:#060F1E}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.87) saturate(1.08) contrast(1.02);transition:transform 9s ease;position:relative;z-index:1}
+.hero:hover .hero-img{transform:scale(1.04)}
+.h-vignette{position:absolute;inset:0;pointer-events:none;z-index:2;background:
+  linear-gradient(to right,rgba(6,15,30,.5) 0%,rgba(6,15,30,.1) 22%,transparent 40%),
+  linear-gradient(to top,rgba(6,15,30,.72) 0%,rgba(6,15,30,.1) 38%,transparent 55%),
+  linear-gradient(to bottom,rgba(6,15,30,.3) 0%,transparent 22%)}
+/* — Floating cards base — */
+.fc6{position:absolute;z-index:10;background:#fff;border-radius:15px;box-shadow:0 10px 44px rgba(0,0,0,.22),0 2px 8px rgba(0,0,0,.1)}
+/* Rating card */
+.fc6-rat{top:24px;left:24px;padding:12px 16px;display:flex;align-items:center;gap:12px;min-width:218px;animation:fc6f 5.2s ease-in-out .4s infinite}
+.fc6-rat-ico{width:38px;height:38px;border-radius:10px;background:#FEF9C3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.fc6-rat-title{font-size:13px;font-weight:700;color:#0F172A;line-height:1.3}
+.fc6-rat-sub{font-size:11px;color:#64748B;margin-top:2px}
+/* Product cards */
+.fc6-p{padding:14px;width:160px}
+.fc6-pbadge{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:9px;letter-spacing:.5px}
+.fc6-pbadge.pop{background:#D1FAE5;color:#065F46}
+.fc6-pbadge.best{background:#FEE2E2;color:#991B1B}
+.fc6-pbadge.fav{background:#DBEAFE;color:#1E40AF}
+.fc6-pimg{width:100%;height:78px;border-radius:10px;background:linear-gradient(135deg,#F8FAFC,#EFF6FF);display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:9px}
+.fc6-pname{font-size:12px;font-weight:700;color:#0F172A;line-height:1.35;margin-bottom:5px}
+.fc6-pstars{font-size:11px;color:#F59E0B;margin-bottom:5px;letter-spacing:.3px}
+.fc6-pprice{font-size:16px;font-weight:800;color:#E8611A}
+/* Card positions */
+.fc6-c1{bottom:128px;left:20px;animation:fc6f 5.2s ease-in-out 0s infinite}
+.fc6-c2{top:64px;right:20px;animation:fc6f 5.2s ease-in-out 1.3s infinite}
+.fc6-c3{bottom:88px;right:20px;animation:fc6f 5.2s ease-in-out .65s infinite}
+/* Shipping strip */
+.fc6-ship{position:absolute;bottom:0;left:0;right:0;z-index:10;background:rgba(7,17,35,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 24px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,.08)}
+.fc6-ship-ico{font-size:22px;flex-shrink:0}
+.fc6-ship-title{font-size:13px;font-weight:700;color:#fff}
+.fc6-ship-sub{font-size:11px;color:rgba(255,255,255,.48);margin-top:2px}
+@keyframes fc6f{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+/* — Mobile — */
 @media(max-width:960px){
-  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero{grid-template-columns:1fr}
   .hero-left{padding:52px 24px 48px}
-  .hero-right{min-height:340px}
-  .fc5-prod{bottom:14px;left:12px;min-width:200px;padding:14px 16px}
-  .fc5-rate{top:14px;right:12px;min-width:155px;padding:14px 16px}
-  .fc5-del{display:none}
-  .h-ti{padding:13px 14px}
-  .h-ti-txt{font-size:11.5px}
+  .hero-right{min-height:360px}
+  .fc6-c1{bottom:80px;left:12px;width:145px}
+  .fc6-c2{top:44px;right:12px;width:145px}
+  .fc6-c3{display:none}
+  .fc6-rat{left:12px;top:10px;min-width:190px}
+  .fc6-ship{padding:10px 16px}
 }
 @media(max-width:520px){
-  .hero-right{min-height:240px}
-  .h-headline{font-size:25px}
-  .fc5-prod{min-width:170px}
+  .hero-right{min-height:280px}
+  .h-headline,.h-headline-em{font-size:24px}
+  .fc6-rat{min-width:168px}
   .h-btns{flex-direction:column}
   .h-trust{flex-direction:column;border-radius:12px}
-  .h-ti{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);flex:none}
+  .h-ti{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);flex:none;padding:12px 15px}
   .h-ti:last-child{border-bottom:none}
 }`;
 
@@ -367,85 +363,100 @@ function P0(){return `<!DOCTYPE html>
 </div></nav>
 <section class="hero">
   <div class="hero-left">
-    <div class="h-shimmer"></div>
+    <div class="h-glow"></div>
     <div class="h-eyebrow">
-      <span class="h-eyedot"></span>
+      <span class="h-dash"></span>
       <span class="h-eyetext">Trusted U.S. Home Essentials</span>
     </div>
-    <h1 class="h-headline">Make Every Corner<br>Of Your Home Feel<br><em>Smarter &amp; Easier</em></h1>
-    <div class="h-rule"></div>
-    <p class="h-quote">&ldquo;Small upgrades that make everyday home life feel easier.&rdquo;</p>
-    <p class="h-sub">Practical kitchen, organization, smart home, and pet essentials&nbsp;&mdash; designed to save time, reduce clutter, and simplify the way you live.</p>
+    <h1 class="h-headline">Make Every Corner<br>Of Your Home Feel</h1>
+    <p class="h-headline-em">Smarter, Cleaner &amp; Easier</p>
+    <p class="h-sub">Practical kitchen, organization, smart home, and pet essentials &mdash; designed to save time, reduce clutter, and simplify the way you live.</p>
+    <div class="h-social">
+      <div class="h-avatars">
+        <div class="h-av">&#128105;</div>
+        <div class="h-av">&#128104;</div>
+        <div class="h-av">&#128105;</div>
+        <div class="h-av">&#128104;</div>
+      </div>
+      <div class="h-socr">
+        <div class="h-socstars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="h-socnum">4.8/5</span></div>
+        <div class="h-soctxt">Trusted by thousands of U.S. homeowners</div>
+      </div>
+    </div>
     <div class="h-btns">
-      <a href="#best-sellers" class="h-cta1">Shop Customer Favorites</a>
-      <a href="#kitchen" class="h-cta2">Explore Collections</a>
+      <a href="#best-sellers" class="h-cta1">&#128722; Shop Customer Favorites</a>
+      <a href="#kitchen" class="h-cta2">Explore Collections &#8594;</a>
     </div>
     <div class="h-trust">
       <div class="h-ti">
-        <span class="h-ti-ico">&#127968;</span>
-        <div class="h-ti-inner">
-          <div class="h-ti-label">Selection</div>
-          <div class="h-ti-txt">Curated Home Finds</div>
-        </div>
+        <div class="h-tiico">&#127968;</div>
+        <div><div class="h-titop">Curated</div><div class="h-tibot">Home Finds</div></div>
       </div>
       <div class="h-ti">
-        <span class="h-ti-ico">&#128230;</span>
-        <div class="h-ti-inner">
-          <div class="h-ti-label">Delivery</div>
-          <div class="h-ti-txt">Fast US Shipping</div>
-        </div>
+        <div class="h-tiico">&#128666;</div>
+        <div><div class="h-titop">Fast</div><div class="h-tibot">US Shipping</div></div>
       </div>
       <div class="h-ti">
-        <span class="h-ti-ico">&#128274;</span>
-        <div class="h-ti-inner">
-          <div class="h-ti-label">Payment</div>
-          <div class="h-ti-txt">Secure Checkout</div>
-        </div>
+        <div class="h-tiico">&#128274;</div>
+        <div><div class="h-titop">Secure</div><div class="h-tibot">Checkout</div></div>
       </div>
       <div class="h-ti">
-        <span class="h-ti-ico">&#8617;&#65039;</span>
-        <div class="h-ti-inner">
-          <div class="h-ti-label">Guarantee</div>
-          <div class="h-ti-txt">30-Day Returns</div>
-        </div>
+        <div class="h-tiico">&#8617;&#65039;</div>
+        <div><div class="h-titop">30-Day</div><div class="h-tibot">Returns</div></div>
+      </div>
+    </div>
+    <div class="h-qsec">
+      <div class="h-qmark">&#8220;</div>
+      <div>
+        <p class="h-qtxt">Small upgrades that make everyday home life feel easier.</p>
+        <div class="h-qline"></div>
       </div>
     </div>
   </div>
   <div class="hero-right">
-    <div class="h-img-glow"></div>
     <img class="hero-img"
-      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=750&q=88&auto=format&fit=crop&crop=center"
+      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=850&q=88&auto=format&fit=crop&crop=center"
       alt="Modern organized kitchen with practical home essentials"
       loading="eager"/>
     <div class="h-vignette"></div>
-    <div class="fc5 fc5-prod">
-      <div class="fc5-imgbox">&#129803;</div>
+    <div class="fc6 fc6-rat">
+      <div class="fc6-rat-ico">&#11088;</div>
       <div>
-        <div class="fc5-badge">Best Seller</div>
-        <div class="fc5-name">Airtight Container Set</div>
-        <div class="fc5-prow">
-          <span class="fc5-price">$24.99</span>
-          <span class="fc5-was">$44.99</span>
-        </div>
-        <div class="fc5-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</div>
+        <div class="fc6-rat-title">4.8/5 Customer Rating</div>
+        <div class="fc6-rat-sub">20,000+ Happy Customers</div>
       </div>
     </div>
-    <div class="fc5 fc5-rate">
-      <div class="fc5-rstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <div class="fc5-rnum">4.8</div>
-      <div class="fc5-rlabel">Customer Rating</div>
-      <div class="fc5-rsub">Based on verified orders</div>
-      <div class="fc5-rbar"><div class="fc5-rbar-fill"></div></div>
+    <div class="fc6 fc6-p fc6-c1">
+      <div class="fc6-pbadge pop">Most Popular</div>
+      <div class="fc6-pimg">&#129803;</div>
+      <div class="fc6-pname">Airtight Container Set</div>
+      <div class="fc6-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
+      <div class="fc6-pprice">$24.99</div>
     </div>
-    <div class="fc5 fc5-del">
-      <span class="fc5-del-ico">&#128230;</span>
+    <div class="fc6 fc6-p fc6-c2">
+      <div class="fc6-pbadge best">Bestseller</div>
+      <div class="fc6-pimg">&#128161;</div>
+      <div class="fc6-pname">Motion Sensor Light</div>
+      <div class="fc6-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
+      <div class="fc6-pprice">$18.99</div>
+    </div>
+    <div class="fc6 fc6-p fc6-c3">
+      <div class="fc6-pbadge fav">Customer Favorite</div>
+      <div class="fc6-pimg">&#129695;</div>
+      <div class="fc6-pname">Kitchen Sink Organizer</div>
+      <div class="fc6-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</div>
+      <div class="fc6-pprice">$16.99</div>
+    </div>
+    <div class="fc6-ship">
+      <span class="fc6-ship-ico">&#128666;</span>
       <div>
-        <div class="fc5-del-title">Free Shipping on $50+</div>
-        <div class="fc5-del-sub">Tracked to your door</div>
+        <div class="fc6-ship-title">Fast &amp; Reliable US Shipping</div>
+        <div class="fc6-ship-sub">Get your favorites delivered quickly to your door. &#127482;&#127480;</div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
