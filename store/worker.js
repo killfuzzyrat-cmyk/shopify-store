@@ -181,27 +181,47 @@ footer{background:var(--navy);padding:60px 40px 32px}
   .sg{grid-template-columns:1fr}
   .rel-grid{grid-template-columns:1fr 1fr}
 }
-/* ═══ HERO simple ═══ */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px;overflow:hidden;background:linear-gradient(140deg,#0A1628 0%,#112248 50%,#1A3A72 100%)}
-.hero-left{padding:80px 52px 80px 60px;display:flex;flex-direction:column;justify-content:center}
-.h-eye{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.h-eye-line{width:28px;height:2px;background:#F5A623;flex-shrink:0;border-radius:2px}
-.h-eye-txt{font-size:11px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#F5A623}
-.h-h1{font-size:clamp(28px,3.2vw,48px);font-weight:800;line-height:1.12;color:#fff;letter-spacing:-.3px;margin-bottom:18px}
-.h-h1 em{font-style:normal;color:#F5A623}
-.h-p{font-size:15px;color:rgba(255,255,255,.58);line-height:1.75;max-width:420px;margin-bottom:36px}
+/* ═══ HERO — Vivid Midnight ═══ */
+.hero{
+  display:grid;grid-template-columns:1fr 1fr;min-height:580px;overflow:hidden;position:relative;
+  background:
+    radial-gradient(ellipse 65% 70% at 0% 110%, rgba(245,140,30,.14) 0%, transparent 52%),
+    radial-gradient(ellipse 50% 45% at 105% 0%,  rgba(56,105,220,.1)  0%, transparent 55%),
+    linear-gradient(150deg,#020810 0%,#060F1E 22%,#091828 52%,#0C2040 78%,#0E2850 100%);
+}
+/* top accent line */
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(245,166,35,.35) 30%,rgba(245,166,35,.5) 55%,transparent);z-index:3}
+.hero-left{padding:80px 52px 80px 60px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
+/* eyebrow */
+.h-eye{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.h-eye-line{width:28px;height:2.5px;background:#FFB442;flex-shrink:0;border-radius:2px}
+.h-eye-txt{font-size:10.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#FFB442}
+/* headline */
+.h-h1{font-size:clamp(28px,3.2vw,50px);font-weight:800;line-height:1.1;color:#FFFFFF;letter-spacing:-.4px;margin-bottom:4px}
+.h-em{font-size:clamp(28px,3.2vw,50px);font-weight:800;font-style:italic;line-height:1.15;margin-bottom:22px;
+  background:linear-gradient(110deg,#FFB442 0%,#FFD580 52%,#F5A020 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* body */
+.h-p{font-size:15px;color:rgba(183,207,255,.75);line-height:1.76;max-width:420px;margin-bottom:38px;font-weight:400}
+/* CTAs */
 .h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
-.h-btn1{background:#E8611A;color:#fff;padding:14px 28px;font-size:14px;font-weight:700;border-radius:9px;display:inline-block;text-decoration:none;transition:all .25s;box-shadow:0 4px 18px rgba(232,97,26,.4)}
-.h-btn1:hover{background:#D4561A;transform:translateY(-2px);box-shadow:0 8px 26px rgba(232,97,26,.5)}
-.h-btn2{background:transparent;color:rgba(255,255,255,.8);border:2px solid rgba(255,255,255,.25);padding:14px 28px;font-size:14px;font-weight:600;border-radius:9px;display:inline-block;text-decoration:none;transition:all .25s}
-.h-btn2:hover{border-color:rgba(255,255,255,.55);color:#fff}
-.h-badges{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-.h-badge{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.55);font-weight:500}
-.h-badge-dot{width:6px;height:6px;border-radius:50%;background:#F5A623;flex-shrink:0}
-.h-badge-sep{width:1px;height:18px;background:rgba(255,255,255,.14);flex-shrink:0}
+.h-btn1{background:linear-gradient(135deg,#FF6C2A 0%,#E8561A 100%);color:#fff;padding:15px 30px;font-size:14px;font-weight:700;border-radius:10px;display:inline-block;text-decoration:none;transition:all .27s;box-shadow:0 4px 22px rgba(232,86,26,.42)}
+.h-btn1:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,86,26,.55)}
+.h-btn2{background:rgba(255,255,255,.06);color:rgba(255,255,255,.82);border:1.5px solid rgba(255,255,255,.2);padding:15px 30px;font-size:14px;font-weight:600;border-radius:10px;display:inline-block;text-decoration:none;transition:all .27s}
+.h-btn2:hover{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.1);color:#fff}
+/* trust badges */
+.h-badges{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.h-badge{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(183,207,255,.62);font-weight:500}
+.h-badge-dot{width:6px;height:6px;border-radius:50%;background:#FFB442;flex-shrink:0;box-shadow:0 0 6px rgba(255,180,66,.5)}
+.h-badge-sep{width:1px;height:16px;background:rgba(183,207,255,.15);flex-shrink:0}
+/* right panel */
 .hero-right{position:relative;overflow:hidden}
-.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.88) saturate(1.05)}
-.h-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,22,40,.55) 0%,rgba(10,22,40,.1) 35%,transparent 60%),linear-gradient(to top,rgba(10,22,40,.5) 0%,transparent 40%)}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.92) saturate(1.1) contrast(1.04)}
+.hero:hover .hero-img{transform:scale(1.03);transition:transform 9s ease}
+.h-overlay{position:absolute;inset:0;background:
+  linear-gradient(to right,rgba(2,8,16,.62) 0%,rgba(2,8,16,.18) 30%,transparent 55%),
+  linear-gradient(to top,rgba(2,8,16,.55) 0%,transparent 38%)}
+/* mobile */
 @media(max-width:860px){
   .hero{grid-template-columns:1fr}
   .hero-left{padding:56px 24px 48px}
@@ -294,7 +314,8 @@ function P0(){return `<!DOCTYPE html>
       <span class="h-eye-line"></span>
       <span class="h-eye-txt">Trusted U.S. Home Essentials</span>
     </div>
-    <h1 class="h-h1">Make Your Home Feel<br><em>Smarter &amp; Easier</em></h1>
+    <h1 class="h-h1">Make Your Home Feel</h1>
+    <p class="h-em">Smarter &amp; Easier</p>
     <p class="h-p">Practical kitchen, organization, smart home, and pet essentials&nbsp;&mdash; curated to save you time, reduce clutter, and simplify everyday life.</p>
     <div class="h-btns">
       <a href="#best-sellers" class="h-btn1">Shop Customer Favorites</a>
@@ -310,8 +331,8 @@ function P0(){return `<!DOCTYPE html>
   </div>
   <div class="hero-right">
     <img class="hero-img"
-      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=90&auto=format&fit=crop&crop=center"
-      alt="Modern organized kitchen"
+      src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=90&auto=format&fit=crop&crop=center"
+      alt="Beautiful modern kitchen"
       loading="eager"/>
     <div class="h-overlay"></div>
   </div>
