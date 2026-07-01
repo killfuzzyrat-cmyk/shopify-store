@@ -181,104 +181,107 @@ footer{background:var(--navy);padding:60px 40px 32px}
   .sg{grid-template-columns:1fr}
   .rel-grid{grid-template-columns:1fr 1fr}
 }
-/* ═══ HERO v6 — DTC Reference Match ═══ */
+/* ═══ HERO v7 — Reference Pixel Match ═══ */
 .hero{display:grid;grid-template-columns:42fr 58fr;min-height:640px;overflow:hidden}
 .hero-left{
   background:linear-gradient(158deg,#060F1E 0%,#0A1628 48%,#0C1C35 100%);
-  padding:60px 48px 60px 56px;
+  padding:56px 44px 56px 52px;
   display:flex;flex-direction:column;justify-content:center;
   position:relative;overflow:hidden;
 }
-.h-glow{position:absolute;bottom:-100px;left:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(245,166,35,.08) 0%,rgba(37,99,235,.07) 40%,transparent 70%);pointer-events:none}
+.h-glow{position:absolute;bottom:-80px;left:-60px;width:320px;height:320px;background:radial-gradient(circle,rgba(245,166,35,.07) 0%,rgba(37,99,235,.06) 40%,transparent 70%);pointer-events:none}
 /* — Eyebrow — */
-.h-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:18px;position:relative;z-index:1}
+.h-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:14px;position:relative;z-index:1}
 .h-dash{width:28px;height:2.5px;background:#F5A623;border-radius:2px;flex-shrink:0}
-.h-eyetext{font-size:10.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#F5A623}
+.h-eyetext{font-size:10px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:#F5A623}
 /* — Headline — */
-.h-headline{font-size:clamp(26px,2.9vw,42px);font-weight:800;line-height:1.12;color:#FFFFFF;margin-bottom:4px;position:relative;z-index:1}
-.h-headline-em{font-size:clamp(26px,2.9vw,42px);font-weight:800;font-style:italic;color:#F5A623;line-height:1.2;margin-bottom:18px;position:relative;z-index:1}
+.h-headline{font-size:clamp(24px,2.7vw,40px);font-weight:800;line-height:1.12;color:#FFFFFF;margin-bottom:0;position:relative;z-index:1}
+.h-headline-em{font-size:clamp(24px,2.7vw,40px);font-weight:800;font-style:italic;color:#F5A623;line-height:1.18;margin-bottom:14px;position:relative;z-index:1}
 /* — Sub — */
-.h-sub{font-size:14px;color:rgba(255,255,255,.5);line-height:1.74;margin-bottom:18px;max-width:400px;position:relative;z-index:1}
-/* — Social proof row — */
-.h-social{display:flex;align-items:center;gap:14px;margin-bottom:24px;position:relative;z-index:1}
-.h-avatars{display:flex}
-.h-av{width:30px;height:30px;border-radius:50%;border:2.5px solid rgba(255,255,255,.8);background:linear-gradient(135deg,#1E3A6E,#0A1628);display:flex;align-items:center;justify-content:center;font-size:13px;margin-right:-9px;flex-shrink:0}
+.h-sub{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.72;margin-bottom:16px;max-width:400px;position:relative;z-index:1}
+/* — Social proof — */
+.h-social{display:flex;align-items:center;gap:12px;margin-bottom:22px;position:relative;z-index:1}
+.h-avatars{display:flex;align-items:center}
+.h-av{width:32px;height:32px;border-radius:50%;border:2.5px solid rgba(255,255,255,.85);overflow:hidden;flex-shrink:0;margin-right:-10px;background:#1E3A6E;position:relative}
 .h-av:last-child{margin-right:0}
-.h-socr{display:flex;flex-direction:column;gap:1px;margin-left:8px}
-.h-socstars{font-size:13px;color:#F5A623;letter-spacing:.5px;display:inline-flex;align-items:center;gap:7px}
-.h-socnum{font-size:12.5px;font-weight:700;color:#fff}
-.h-soctxt{font-size:11px;color:rgba(255,255,255,.42)}
+.h-av img{width:100%;height:100%;object-fit:cover;display:block}
+.h-socr{display:flex;flex-direction:column;gap:2px;margin-left:10px}
+.h-socstars{display:flex;align-items:center;gap:6px}
+.h-sstar{color:#F5A623;font-size:13px;letter-spacing:.5px}
+.h-snum{font-size:12.5px;font-weight:700;color:#fff}
+.h-stxt{font-size:11px;color:rgba(255,255,255,.4)}
 /* — CTAs — */
-.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;position:relative;z-index:1}
-.h-cta1{background:#E8611A;color:#fff;padding:14px 22px;font-size:13px;font-weight:700;border-radius:10px;display:inline-flex;align-items:center;gap:9px;text-decoration:none;transition:all .25s;box-shadow:0 4px 22px rgba(232,97,26,.42)}
-.h-cta1:hover{background:#D4561A;transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,97,26,.52)}
-.h-cta2{background:rgba(255,255,255,.07);color:#fff;border:1.5px solid rgba(255,255,255,.22);padding:14px 22px;font-size:13px;font-weight:600;border-radius:10px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;transition:all .25s}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;position:relative;z-index:1}
+.h-cta1{background:#E8611A;color:#fff;padding:13px 20px;font-size:13px;font-weight:700;border-radius:10px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;transition:all .25s;box-shadow:0 4px 20px rgba(232,97,26,.4)}
+.h-cta1:hover{background:#D4561A;transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,97,26,.5)}
+.h-cta1 svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;flex-shrink:0}
+.h-cta2{background:rgba(255,255,255,.07);color:#fff;border:1.5px solid rgba(255,255,255,.22);padding:13px 20px;font-size:13px;font-weight:600;border-radius:10px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;transition:all .25s}
 .h-cta2:hover{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.12)}
 /* — Glass Trust Bar — */
-.h-trust{display:flex;align-items:stretch;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:14px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);margin-bottom:28px;position:relative;z-index:1;overflow:hidden}
-.h-ti{display:flex;align-items:center;gap:10px;padding:13px 15px;flex:1;border-right:1px solid rgba(255,255,255,.07)}
+.h-trust{display:flex;align-items:stretch;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);border-radius:14px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);margin-bottom:24px;position:relative;z-index:1;overflow:hidden}
+.h-ti{display:flex;align-items:center;gap:9px;padding:12px 14px;flex:1;border-right:1px solid rgba(255,255,255,.07)}
 .h-ti:last-child{border-right:none}
-.h-tiico{width:32px;height:32px;border-radius:9px;background:rgba(245,166,35,.14);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.h-tiico{width:30px;height:30px;border-radius:8px;background:rgba(245,166,35,.14);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.h-tiico svg{width:14px;height:14px;stroke:#F5A623;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .h-titop{font-size:12px;font-weight:700;color:#fff;line-height:1.2}
-.h-tibot{font-size:10.5px;color:rgba(255,255,255,.37);line-height:1.2}
+.h-tibot{font-size:10px;color:rgba(255,255,255,.37);line-height:1.2}
 /* — Quote — */
-.h-qsec{display:flex;align-items:flex-start;gap:12px;position:relative;z-index:1}
-.h-qmark{font-size:64px;color:#F5A623;line-height:.62;font-family:Georgia,serif;flex-shrink:0;margin-top:6px}
-.h-qtxt{font-size:14.5px;font-style:italic;color:rgba(255,255,255,.76);line-height:1.62}
-.h-qline{width:52px;height:3px;background:#F5A623;border-radius:2px;margin-top:9px}
+.h-qsec{display:flex;align-items:flex-start;gap:11px;position:relative;z-index:1}
+.h-qmark{font-size:62px;color:#F5A623;line-height:.6;font-family:Georgia,serif;flex-shrink:0;margin-top:6px}
+.h-qtxt{font-size:14.5px;font-style:italic;color:rgba(255,255,255,.75);line-height:1.6}
+.h-qline{width:52px;height:3px;background:#F5A623;border-radius:2px;margin-top:8px}
 /* — Right panel — */
 .hero-right{position:relative;overflow:hidden;background:#060F1E}
-.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.87) saturate(1.08) contrast(1.02);transition:transform 9s ease;position:relative;z-index:1}
-.hero:hover .hero-img{transform:scale(1.04)}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.95) saturate(1.06) contrast(1.01);transition:transform 9s ease;position:relative;z-index:1}
+.hero:hover .hero-img{transform:scale(1.03)}
 .h-vignette{position:absolute;inset:0;pointer-events:none;z-index:2;background:
-  linear-gradient(to right,rgba(6,15,30,.5) 0%,rgba(6,15,30,.1) 22%,transparent 40%),
-  linear-gradient(to top,rgba(6,15,30,.72) 0%,rgba(6,15,30,.1) 38%,transparent 55%),
-  linear-gradient(to bottom,rgba(6,15,30,.3) 0%,transparent 22%)}
+  linear-gradient(to right,rgba(6,15,30,.42) 0%,rgba(6,15,30,.06) 20%,transparent 38%),
+  linear-gradient(to top,rgba(6,15,30,.5) 0%,transparent 28%),
+  linear-gradient(to bottom,rgba(6,15,30,.2) 0%,transparent 18%)}
 /* — Floating cards base — */
-.fc6{position:absolute;z-index:10;background:#fff;border-radius:15px;box-shadow:0 10px 44px rgba(0,0,0,.22),0 2px 8px rgba(0,0,0,.1)}
-/* Rating card */
-.fc6-rat{top:24px;left:24px;padding:12px 16px;display:flex;align-items:center;gap:12px;min-width:218px;animation:fc6f 5.2s ease-in-out .4s infinite}
-.fc6-rat-ico{width:38px;height:38px;border-radius:10px;background:#FEF9C3;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.fc6-rat-title{font-size:13px;font-weight:700;color:#0F172A;line-height:1.3}
-.fc6-rat-sub{font-size:11px;color:#64748B;margin-top:2px}
+.fc7{position:absolute;z-index:10;background:#fff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.2),0 2px 8px rgba(0,0,0,.1)}
+/* Rating pill — top left */
+.fc7-rat{top:20px;left:20px;padding:11px 16px;display:flex;align-items:center;gap:12px;min-width:212px;border-radius:50px;animation:fc7f 5s ease-in-out .4s infinite}
+.fc7-rat-ico{width:36px;height:36px;border-radius:50%;background:#FEF9C3;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.fc7-rat-title{font-size:12.5px;font-weight:700;color:#0F172A;line-height:1.2}
+.fc7-rat-sub{font-size:10.5px;color:#64748B;margin-top:1px}
 /* Product cards */
-.fc6-p{padding:14px;width:160px}
-.fc6-pbadge{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:9px;letter-spacing:.5px}
-.fc6-pbadge.pop{background:#D1FAE5;color:#065F46}
-.fc6-pbadge.best{background:#FEE2E2;color:#991B1B}
-.fc6-pbadge.fav{background:#DBEAFE;color:#1E40AF}
-.fc6-pimg{width:100%;height:78px;border-radius:10px;background:linear-gradient(135deg,#F8FAFC,#EFF6FF);display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:9px}
-.fc6-pname{font-size:12px;font-weight:700;color:#0F172A;line-height:1.35;margin-bottom:5px}
-.fc6-pstars{font-size:11px;color:#F59E0B;margin-bottom:5px;letter-spacing:.3px}
-.fc6-pprice{font-size:16px;font-weight:800;color:#E8611A}
-/* Card positions */
-.fc6-c1{bottom:128px;left:20px;animation:fc6f 5.2s ease-in-out 0s infinite}
-.fc6-c2{top:64px;right:20px;animation:fc6f 5.2s ease-in-out 1.3s infinite}
-.fc6-c3{bottom:88px;right:20px;animation:fc6f 5.2s ease-in-out .65s infinite}
+.fc7-p{padding:14px;width:158px}
+.fc7-pbadge{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:9px;letter-spacing:.5px;text-transform:uppercase}
+.fc7-pbadge.pop{background:#D1FAE5;color:#065F46}
+.fc7-pbadge.best{background:#FEE2E2;color:#991B1B}
+.fc7-pbadge.fav{background:#DBEAFE;color:#1E40AF}
+.fc7-pimg{width:100%;height:84px;border-radius:10px;background:linear-gradient(135deg,#F8FAFC,#EEF2FF);display:flex;align-items:center;justify-content:center;margin-bottom:9px;overflow:hidden;font-size:40px;line-height:1}
+.fc7-pimg img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+.fc7-pname{font-size:12px;font-weight:700;color:#0F172A;line-height:1.35;margin-bottom:5px}
+.fc7-pstars{font-size:11px;color:#F59E0B;margin-bottom:5px}
+.fc7-pprice{font-size:16px;font-weight:800;color:#E8611A}
+/* Positions */
+.fc7-c1{bottom:120px;left:18px;animation:fc7f 5s ease-in-out 0s infinite}
+.fc7-c2{top:56px;right:18px;animation:fc7f 5s ease-in-out 1.3s infinite}
+.fc7-c3{bottom:80px;right:18px;animation:fc7f 5s ease-in-out .65s infinite}
 /* Shipping strip */
-.fc6-ship{position:absolute;bottom:0;left:0;right:0;z-index:10;background:rgba(7,17,35,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 24px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,.08)}
-.fc6-ship-ico{font-size:22px;flex-shrink:0}
-.fc6-ship-title{font-size:13px;font-weight:700;color:#fff}
-.fc6-ship-sub{font-size:11px;color:rgba(255,255,255,.48);margin-top:2px}
-@keyframes fc6f{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.fc7-ship{position:absolute;bottom:0;left:0;right:0;z-index:10;background:rgba(7,17,35,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:13px 22px;display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,.08)}
+.fc7-ship-svg{width:24px;height:24px;flex-shrink:0;stroke:rgba(255,255,255,.7);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fc7-ship-title{font-size:13px;font-weight:700;color:#fff}
+.fc7-ship-sub{font-size:11px;color:rgba(255,255,255,.45);margin-top:2px}
+@keyframes fc7f{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 /* — Mobile — */
 @media(max-width:960px){
   .hero{grid-template-columns:1fr}
-  .hero-left{padding:52px 24px 48px}
+  .hero-left{padding:48px 24px 44px}
   .hero-right{min-height:360px}
-  .fc6-c1{bottom:80px;left:12px;width:145px}
-  .fc6-c2{top:44px;right:12px;width:145px}
-  .fc6-c3{display:none}
-  .fc6-rat{left:12px;top:10px;min-width:190px}
-  .fc6-ship{padding:10px 16px}
+  .fc7-c1{bottom:72px;left:12px;width:144px}
+  .fc7-c2{top:40px;right:12px;width:144px}
+  .fc7-c3{display:none}
+  .fc7-rat{left:10px;top:8px;min-width:186px}
 }
 @media(max-width:520px){
   .hero-right{min-height:280px}
-  .h-headline,.h-headline-em{font-size:24px}
-  .fc6-rat{min-width:168px}
+  .h-headline,.h-headline-em{font-size:23px}
   .h-btns{flex-direction:column}
   .h-trust{flex-direction:column;border-radius:12px}
-  .h-ti{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);flex:none;padding:12px 15px}
+  .h-ti{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);flex:none;padding:11px 14px}
   .h-ti:last-child{border-bottom:none}
 }`;
 
@@ -373,35 +376,38 @@ function P0(){return `<!DOCTYPE html>
     <p class="h-sub">Practical kitchen, organization, smart home, and pet essentials &mdash; designed to save time, reduce clutter, and simplify the way you live.</p>
     <div class="h-social">
       <div class="h-avatars">
-        <div class="h-av">&#128105;</div>
-        <div class="h-av">&#128104;</div>
-        <div class="h-av">&#128105;</div>
-        <div class="h-av">&#128104;</div>
+        <div class="h-av"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
+        <div class="h-av"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
+        <div class="h-av"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40&h=40&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
+        <div class="h-av"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&q=80&auto=format&fit=crop&crop=faces" alt=""/></div>
       </div>
       <div class="h-socr">
-        <div class="h-socstars">&#9733;&#9733;&#9733;&#9733;&#9733; <span class="h-socnum">4.8/5</span></div>
-        <div class="h-soctxt">Trusted by thousands of U.S. homeowners</div>
+        <div class="h-socstars">
+          <span class="h-sstar">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="h-snum">4.8/5</span>
+        </div>
+        <div class="h-stxt">Trusted by thousands of U.S. homeowners</div>
       </div>
     </div>
     <div class="h-btns">
-      <a href="#best-sellers" class="h-cta1">&#128722; Shop Customer Favorites</a>
+      <a href="#best-sellers" class="h-cta1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg> Shop Customer Favorites</a>
       <a href="#kitchen" class="h-cta2">Explore Collections &#8594;</a>
     </div>
     <div class="h-trust">
       <div class="h-ti">
-        <div class="h-tiico">&#127968;</div>
+        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
         <div><div class="h-titop">Curated</div><div class="h-tibot">Home Finds</div></div>
       </div>
       <div class="h-ti">
-        <div class="h-tiico">&#128666;</div>
+        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
         <div><div class="h-titop">Fast</div><div class="h-tibot">US Shipping</div></div>
       </div>
       <div class="h-ti">
-        <div class="h-tiico">&#128274;</div>
+        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
         <div><div class="h-titop">Secure</div><div class="h-tibot">Checkout</div></div>
       </div>
       <div class="h-ti">
-        <div class="h-tiico">&#8617;&#65039;</div>
+        <div class="h-tiico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 00-4-4H4"/></svg></div>
         <div><div class="h-titop">30-Day</div><div class="h-tibot">Returns</div></div>
       </div>
     </div>
@@ -415,43 +421,43 @@ function P0(){return `<!DOCTYPE html>
   </div>
   <div class="hero-right">
     <img class="hero-img"
-      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=850&q=88&auto=format&fit=crop&crop=center"
+      src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=90&auto=format&fit=crop&crop=center"
       alt="Modern organized kitchen with practical home essentials"
       loading="eager"/>
     <div class="h-vignette"></div>
-    <div class="fc6 fc6-rat">
-      <div class="fc6-rat-ico">&#11088;</div>
+    <div class="fc7 fc7-rat">
+      <div class="fc7-rat-ico">&#11088;</div>
       <div>
-        <div class="fc6-rat-title">4.8/5 Customer Rating</div>
-        <div class="fc6-rat-sub">20,000+ Happy Customers</div>
+        <div class="fc7-rat-title">4.8/5 Customer Rating</div>
+        <div class="fc7-rat-sub">20,000+ Happy Customers</div>
       </div>
     </div>
-    <div class="fc6 fc6-p fc6-c1">
-      <div class="fc6-pbadge pop">Most Popular</div>
-      <div class="fc6-pimg">&#129803;</div>
-      <div class="fc6-pname">Airtight Container Set</div>
-      <div class="fc6-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
-      <div class="fc6-pprice">$24.99</div>
+    <div class="fc7 fc7-p fc7-c1">
+      <div class="fc7-pbadge pop">Most Popular</div>
+      <div class="fc7-pimg">&#129803;</div>
+      <div class="fc7-pname">Airtight Container Set</div>
+      <div class="fc7-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
+      <div class="fc7-pprice">$24.99</div>
     </div>
-    <div class="fc6 fc6-p fc6-c2">
-      <div class="fc6-pbadge best">Bestseller</div>
-      <div class="fc6-pimg">&#128161;</div>
-      <div class="fc6-pname">Motion Sensor Light</div>
-      <div class="fc6-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
-      <div class="fc6-pprice">$18.99</div>
+    <div class="fc7 fc7-p fc7-c2">
+      <div class="fc7-pbadge best">Bestseller</div>
+      <div class="fc7-pimg">&#128161;</div>
+      <div class="fc7-pname">Motion Sensor Light</div>
+      <div class="fc7-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</div>
+      <div class="fc7-pprice">$18.99</div>
     </div>
-    <div class="fc6 fc6-p fc6-c3">
-      <div class="fc6-pbadge fav">Customer Favorite</div>
-      <div class="fc6-pimg">&#129695;</div>
-      <div class="fc6-pname">Kitchen Sink Organizer</div>
-      <div class="fc6-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</div>
-      <div class="fc6-pprice">$16.99</div>
+    <div class="fc7 fc7-p fc7-c3">
+      <div class="fc7-pbadge fav">Customer Favorite</div>
+      <div class="fc7-pimg">&#129695;</div>
+      <div class="fc7-pname">Kitchen Sink Organizer</div>
+      <div class="fc7-pstars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8</div>
+      <div class="fc7-pprice">$16.99</div>
     </div>
-    <div class="fc6-ship">
-      <span class="fc6-ship-ico">&#128666;</span>
+    <div class="fc7-ship">
+      <svg class="fc7-ship-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
       <div>
-        <div class="fc6-ship-title">Fast &amp; Reliable US Shipping</div>
-        <div class="fc6-ship-sub">Get your favorites delivered quickly to your door. &#127482;&#127480;</div>
+        <div class="fc7-ship-title">Fast &amp; Reliable US Shipping</div>
+        <div class="fc7-ship-sub">Get your favorites delivered quickly to your door. &#127482;&#127480;</div>
       </div>
     </div>
   </div>
